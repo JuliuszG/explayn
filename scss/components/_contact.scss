@@ -1,0 +1,222 @@
+.contact{
+    width: 100%;
+    padding: 0 10% 5%;
+    @media(max-width: 825px) {
+        padding: 4%;
+        margin-top: 0;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;    
+    }
+    &__header{
+        @include heading2;
+        margin-bottom: 2vh;
+         @media(max-width: 825px) {
+                font-size: 24px;
+            }
+    }
+    &__subheader{
+        @include body;
+        line-height: 1.5em;
+        width: 60%;
+        margin-bottom: 5vh;
+        @media(max-width: 825px) {
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.1em;
+        }
+    }
+    &__inputs__cnt{
+        width: 100%;
+        display: flex;
+        margin-bottom: 4vh;
+        @media(max-width: 825px) {
+            flex-direction: column;
+        }
+    }
+    &__input__grp{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @media(max-width: 825px) {
+            width: 100%;
+        }
+        &.error input{
+            border: 1px solid $color-error-60;
+        }
+        &.success input{
+            border: 1px solid $color-success-60;
+        }
+        input{
+            outline: none;
+            border: none;
+            background: #f4f4f4;
+            height: 58px;
+            width: 38vw;
+            @include lead;
+            padding: 0 2%;
+            @media(max-width: 825px) {
+                width: 100%;
+            }
+        }
+        label{
+            @include lead;
+            position: absolute;
+            top: calc(50% - 8px);
+            left: 2%;
+            color: $color-neutral-80;
+            transition: all .3s;
+        }
+        input:focus + label, input:not(:placeholder-shown) + label{
+            top: 6px;
+            font-size: 12px;
+        }
+    }
+    .err__cnt{
+        small{
+            margin-left: 10%;
+            display: none;
+            &.error__text__shown{
+                opacity: 1;
+                display: inline-block;
+            }
+        }
+    }
+    .contact__form__rightside{
+        position: relative;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        &.error textarea{
+            border: 1px solid $color-error-60;
+        }
+        &.success textarea{
+            border: 1px solid $color-success-60;
+        }
+        @media(max-width: 825px) {
+            margin-left: 0;
+            margin-top: 2vh;
+            width: 100%;
+        }
+        label{
+            @include lead;
+            position: absolute;
+            top: 10%;
+            left: 2%;
+            color: $color-neutral-80;
+            transition: all .3s;
+        }
+        textarea{
+            outline: none;
+            border: none;
+            background: #f4f4f4;
+            height: 144px;
+            width: 38vw;
+            resize: none;
+            padding: 3.5% 2%;
+            @include lead;
+            @media(max-width: 825px) {
+                width: 100%;
+            }
+        }
+        textarea:focus + label, textarea:not(:placeholder-shown) + label{
+            top: 6px;
+            font-size: 12px;
+        }
+    }
+    .contact__chk__label{
+        position: relative;
+        width: 37vw;
+        display: inline-block;
+        align-self: flex-end;
+        text-align: left;
+        @media(max-width: 825px) {
+            align-self: flex-start;
+            width: 70vw;
+            font-size: 14px;
+        }
+        @media(max-width: 400px) {
+            font-size: 10px;
+        }
+        cursor: pointer;
+        input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0; 
+            &:checked + .custom__checkbox{
+                background: url(/assets/tick.png);
+                background-size: contain;
+                background-position: center;
+            }
+        }
+        .custom__checkbox{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            border: 2px solid #0E0C0C;
+            border-radius: 4px;
+        }
+        p{
+            margin-left: 4vw;
+            line-height: 1.2em;
+            @media(max-width: 700px) {
+                margin-left: 8vw;
+            }
+            @media(max-width: 400px) {
+                margin-left: 10vw;
+            }
+        }
+        small{
+            margin-left: 4vw;
+            @media(max-width: 700px) {
+                margin-left: 8vw;
+            }
+            @media(max-width: 400px) {
+                margin-left: 10vw;
+            }
+        }
+    }
+    .contact__btn{
+        margin-top: 4vh;
+        align-self: flex-end;
+        padding: 10px 20px;
+        @include lead;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #0E0C0C;
+        border-radius: 4px;
+        outline: none;
+        background: transparent;
+        display: inline-block;
+        cursor: pointer;
+        transition: all .3s ease-in;
+        @media(max-width: 825px) {
+            align-self: flex-start;
+        }
+        @media(hover: hover) {
+            &:hover{
+                background: #0E0C0C;
+                color: #fff;
+            }
+        }
+    }
+    small{
+        @include leadSmall;
+        color: $color-error-60;
+        opacity: 0;
+        margin: 1vh 0;
+        display: inline-block;
+        &.error__text__shown{
+            opacity: 1;
+        }
+    }
+}

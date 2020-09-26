@@ -1,0 +1,93 @@
+footer{
+    padding: 5% 10%;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-between;
+    justify-items: center;
+    grid-template-areas: 
+    "first . second nav social";
+    @media (max-width: 956px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "first second nav social";
+    }
+    @media(max-width: 758px) {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5% 6%;
+        grid-template-areas: 
+        "first second nav"
+        ". social .";
+    }
+    @media (max-width: 550px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        justify-items: start;
+        grid-template-areas: 
+        "first second"
+        "nav nav"
+        "social social";
+    }
+    background: $color-neutral-10;
+    .footer__header{
+        @include lead;
+        line-height: 1.4em;
+    }
+    img{
+        width: 100px;
+        height: 30px;
+        object-fit: contain;
+        object-position: center;
+    }
+    .footer__first__col{
+        grid-area: first;
+        @include bodySmall;
+        line-height: 1.3em;
+        .footer__contact{
+            margin-bottom: 1vh;
+        }
+    }
+    .footer__second__col{
+        grid-area: second;
+        li{
+            @include bodySmall;
+            line-height: 1.3em;
+        }
+    }
+    .footer__nav{
+        grid-area: nav;
+        nav{
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 550px) {
+                flex-direction: row;
+            }
+            a{
+                @include bodySmall;
+                color: #000;
+                line-height: 1.3em;
+                @media (max-width: 550px) {
+                    margin-right: 1vw;
+                }
+            }
+        }
+    }
+    .footer__social{
+        grid-area: social;
+        a{
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #0E0C0C;
+            display: inline-block;
+            @media (max-width: 1150px){
+                height: 24px;
+                width: 24px;
+            }
+            span{
+                display: none;
+            }
+        }
+    }
+}

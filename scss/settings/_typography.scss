@@ -1,0 +1,77 @@
+@mixin display {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 3.5em;
+}
+
+@mixin heading1 {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 3em;
+}
+
+@mixin heading2 {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 2.25em;
+}
+
+@mixin heading3 {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+@mixin heading4 {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+@mixin subheading {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 1.125em;
+}
+
+@mixin bodyLarge {
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 1.125em;
+}
+
+@mixin body {
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 1em;
+}
+
+@mixin bodySmall {
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 0.875em;
+}
+
+@mixin caption {
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 0.875em;
+}
+
+@mixin button {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 1em;
+}
+
+@mixin lead {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 1em;
+}
+
+@mixin leadSmall {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 0.75em;
+}

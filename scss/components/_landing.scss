@@ -1,0 +1,73 @@
+.landing {
+    height: 75vh;
+    background: linear-gradient(143deg, #6c6d92, #d5790d, #b22c8f);
+    background-size: 600% 600%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: BgAnimation 7s ease infinite;
+    -moz-animation: BgAnimation 7s ease infinite;
+    animation: BgAnimation 7s ease infinite;
+    position: relative;
+    @media (max-width: 500px) {
+        font-size: 10px;
+    }
+    img{
+        width: 4.6875rem;
+        height: 4.6875rem;
+        margin-right: .3em;
+        animation: fadeIn 1s forwards ease-in;
+        opacity: 0;
+    }
+    .landing__logo{
+        @include display;
+        font-weight: 400;
+        font-size: 5em;
+        display: flex;
+        align-items: center;
+        @for $i from 1 through 8 {
+            span:nth-child(#{$i}){
+                opacity: 0;
+                animation: fadeIn 1s #{0.2 * $i}s forwards ease-in;
+            }
+        }
+    }
+}
+.landing__info{
+    background: #fff;
+    padding: 5% 15%;
+    font-size: 1.5em;
+    font-family: "Inter";
+    font-weight: 600;
+    line-height: 2.2em;
+    text-align: center;
+    @media (max-width: 1250px) {
+        line-height: 2em;
+        font-size: 1.3em;
+        padding: 5% 10%;
+    }
+    @media (max-width: 600px) {
+        line-height: 1.5em;
+        font-size: 1em;
+        padding: 5%;
+    }
+}
+@-webkit-keyframes BgAnimation {
+    0%{background-position:0% 65%}
+    50%{background-position:100% 36%}
+    100%{background-position:0% 65%}
+}
+@-moz-keyframes BgAnimation {
+    0%{background-position:0% 65%}
+    50%{background-position:100% 36%}
+    100%{background-position:0% 65%}
+}
+@keyframes BgAnimation {
+    0%{background-position:0% 65%}
+    50%{background-position:100% 36%}
+    100%{background-position:0% 65%}
+}
+@keyframes fadeIn {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
