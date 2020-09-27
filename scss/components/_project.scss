@@ -1,0 +1,125 @@
+.project__landing{
+    height: 100vh;
+    background: url(/assets/img6.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @media(max-width: 1200px) {
+        font-size: 15px;
+    }
+    @media(max-width: 900px) {
+        font-size: 14px;
+    }
+    @media(max-width: 480px) {
+        font-size: 12px;
+    }
+    .project__title{
+        @include heading1;
+        margin-bottom: 2vh;
+        color: $color-neutral-100;
+        @media(max-width: 480px) {
+            font-size: 2.5em;
+        }
+    }
+    .project__subtitle{
+        @include lead;
+        margin-bottom: 4vh;
+        color: $color-neutral-40;
+    }
+    .project__landing__text{
+        width: 50%;
+        @include bodyLarge;
+        line-height: 1.6875em;
+        @media(max-width: 900px) {
+            width: 100%;
+        }
+    }
+}
+.background{
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @media(max-width: 1200px) {
+        font-size: 15px;
+    }
+    @media(max-width: 900px) {
+        font-size: 14px;
+    }
+    @media(max-width: 480px) {
+        font-size: 12px;
+    }
+    .project__bg__header{
+        @include heading2;
+        color: $color-neutral-40;
+        margin-bottom: 4vh;
+    }
+    .project__bg__text{
+        @include heading4;
+        color: #000000;
+        line-height: 2.25em;
+    }
+}
+.project__pic__big{
+    height: 100vh;
+    &.project__pic__one{
+        background: url(/assets/img1.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+    &.project__pic__two{
+        background: url(/assets/img7.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+}
+.technical{
+    padding: 5% 10%;
+    .project__tech__header{
+        @include heading2;
+        color: $color-neutral-40;
+        margin-bottom: 4vh;
+    }
+    .project__tech__text{
+        @include bodyLarge;
+        color: #000000;
+        line-height: 1.6875em;
+    }
+    .project__tech__icon__cnt{
+        padding: 10% 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        .tech__icon__box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .tech__icon{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 2vh;
+        }
+        p{
+            @include heading4;
+        }
+    }
+    .project__tech__subheader{
+        @include heading3;
+        color: $color-neutral-40;
+        margin-bottom: 4vh;
+    }
+}

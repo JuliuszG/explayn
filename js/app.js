@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     AOS.init();
     smoothie();
     const navbar = this.querySelector(".main__header");
-    const landing = this.querySelector(".landing");
+    const landing = this.querySelector(".first__section");
     const burger = this.querySelector(".burger");
     const menu = this.querySelector(".header__nav__cnt")
     const links = this.querySelectorAll(".header__nav a");
@@ -50,8 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
         dist: 0,
         padding: 50,
     });
-    const interval = setInterval(() => instances.next(), 5000);
-
+    if(carousel){
+        const interval = setInterval(() => instances.next(), 5000);
+    }
     let formState = {
         email: false,
         name: false,

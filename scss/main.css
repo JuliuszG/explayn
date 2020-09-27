@@ -634,31 +634,31 @@ body {
 }
 
 .ourWork .ourWork__row:nth-of-type(1) .ourWork__box:nth-of-type(2) {
-  background-image: url(/assets/img3.jpg);
+  background-image: url(/assets/img2.jpg);
 }
 
 .ourWork .ourWork__row:nth-of-type(2) .ourWork__box:nth-of-type(1) {
-  background-image: url(/assets/img2.jpg);
+  background-image: url(/assets/img5.jpg);
 }
 
 .ourWork .ourWork__row:nth-of-type(2) .ourWork__box:nth-of-type(2) {
-  background-image: url(/assets/img1.jpg);
+  background-image: url(/assets/img5.jpg);
 }
 
 .ourWork .ourWork__row:nth-of-type(3) .ourWork__box:nth-of-type(1) {
-  background-image: url(/assets/img2.jpg);
+  background-image: url(/assets/img5.jpg);
 }
 
 .ourWork .ourWork__row:nth-of-type(3) .ourWork__box:nth-of-type(2) {
-  background-image: url(/assets/img6.jpg);
+  background-image: url(/assets/img3.jpg);
 }
 
 .ourWork .ourWork__row:nth-of-type(4) .ourWork__box:nth-of-type(1) {
-  background-image: url(/assets/img1.jpg);
+  background-image: url(/assets/img5.jpg);
 }
 
 .ourWork .ourWork__row:nth-of-type(4) .ourWork__box:nth-of-type(2) {
-  background-image: url(/assets/img2.jpg);
+  background-image: url(/assets/img3.jpg);
 }
 
 .ourWork .ourWork__row .ourWork__box {
@@ -1251,5 +1251,225 @@ footer .footer__social a {
 
 footer .footer__social a span {
   display: none;
+}
+
+.project__landing {
+  height: 100vh;
+  background: url(/assets/img6.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 5% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 1200px) {
+  .project__landing {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .project__landing {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project__landing {
+    font-size: 12px;
+  }
+}
+
+.project__landing .project__title {
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 2vh;
+  color: #0E0C0C;
+}
+
+@media (max-width: 480px) {
+  .project__landing .project__title {
+    font-size: 2.5em;
+  }
+}
+
+.project__landing .project__subtitle {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 4vh;
+  color: #B29A95;
+}
+
+.project__landing .project__landing__text {
+  width: 50%;
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-size: 1.125em;
+  line-height: 1.6875em;
+}
+
+@media (max-width: 900px) {
+  .project__landing .project__landing__text {
+    width: 100%;
+  }
+}
+
+.background {
+  padding: 5% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 1200px) {
+  .background {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .background {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    font-size: 12px;
+  }
+}
+
+.background .project__bg__header {
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 2.25em;
+  color: #B29A95;
+  margin-bottom: 4vh;
+}
+
+.background .project__bg__text {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #000000;
+  line-height: 2.25em;
+}
+
+.project__pic__big {
+  height: 100vh;
+}
+
+.project__pic__big.project__pic__one {
+  background: url(/assets/img1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.project__pic__big.project__pic__two {
+  background: url(/assets/img7.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.technical {
+  padding: 5% 10%;
+}
+
+.technical .project__tech__header {
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 2.25em;
+  color: #B29A95;
+  margin-bottom: 4vh;
+}
+
+.technical .project__tech__text {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-size: 1.125em;
+  color: #000000;
+  line-height: 1.6875em;
+}
+
+.technical .project__tech__icon__cnt {
+  padding: 10% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.technical .project__tech__icon__cnt .tech__icon__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+}
+
+.technical .project__tech__icon__cnt .tech__icon {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: 2vh;
+}
+
+.technical .project__tech__icon__cnt p {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.technical .project__tech__subheader {
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 1.75em;
+  color: #B29A95;
+  margin-bottom: 4vh;
 }
 /*# sourceMappingURL=main.css.map */
