@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    
+    AOS.init();
+    smoothie();
     const navbar = this.querySelector(".main__header");
     const landing = this.querySelector(".landing");
     const burger = this.querySelector(".burger");
     const menu = this.querySelector(".header__nav__cnt")
+    const links = this.querySelectorAll(".header__nav a");
     let landingHeight = landing.clientHeight;
     let canHover = window.matchMedia('(hover: hover)').matches; 
     const flipBox = [...this.querySelectorAll(".offers__box")];
@@ -30,6 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
     }
+
+    links.forEach(el => {
+        el.addEventListener('click', () => {
+            if(!canHover){
+                menu.classList.remove("open");
+                burger.classList.remove("open");
+            }
+        })
+    })
 
     const carousel = this.querySelector('.carousel');
     const instances = M.Carousel.init(carousel, {
@@ -73,12 +85,24 @@ document.addEventListener('DOMContentLoaded', function() {
             e.target.parentElement.nextElementSibling.classList.add("error__text__shown");
         }
     }
+    const isChecked = (el, field) => {
+        if(el.checked) {
+            formState[field] = true;
+            el.parentElement.classList.add("success");
+            el.parentElement.classList.remove("error");
+            el.parentElement.nextElementSibling.classList.remove("error__text__shown");
+        } else {
+            formState[field] = false;
+            el.parentElement.classList.remove("success");
+            el.parentElement.classList.add("error");
+            el.parentElement.nextElementSibling.classList.add("error__text__shown");
+        }
+    }
     const form = this.querySelector("form");
     const inps = form.querySelectorAll("input");
     const txtArea = form.querySelector("textarea");
     inps[0].addEventListener('keypress', function(e){
         checkEmail(e);
-        console.log(formState.email);
     });
     inps[1].addEventListener('keypress', function(e){
         checkInputLength(e, 3, "name");
@@ -88,6 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     form.addEventListener('submit', function(event){
         event.preventDefault();
-        console.log(formState);
+        isChecked(inps[2], "legal");
+        if(formState.email && formState.name && formState.message && formState.legal){
+            console.log("można wysyłać");
+        } else {
+            console.log("błędnie wypełniony formularz");
+        }
     })
 });

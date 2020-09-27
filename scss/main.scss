@@ -9,6 +9,11 @@
 body{
     @include body;
 }
+
+.d-none{
+    display: none;
+}
+
 @import './components/header.scss';
 @import './components/landing';
 @import './components/offers';

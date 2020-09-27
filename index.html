@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutaj powinieneś wstawić opis strony żeby lepiej się pozycjonowala">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/scss/materialize.css">
     <link rel="stylesheet" href="/scss/main.css">
-    <script src="/js/materialize.min.js" defer></script>
-    <script src="/js/app.js" defer></script>
     <title>Explayn</title>
 </head>
 <body>
@@ -22,16 +22,16 @@
             <img class="logo" src="./assets/slice1.png" alt="logo" />
             <ul class="header__nav">
                 <li>
-                    <a href="/offer">Oferta</a>
+                    <a href="#offer" data-smoothie>Oferta</a>
                 </li>
                 <li>
-                    <a href="/about">O nas</a>
+                    <a href="#about" data-smoothie>O nas</a>
                 </li>
                 <li>
-                    <a href="/realization">Realizacje</a>
+                    <a href="#ourWork" data-smoothie>Realizacje</a>
                 </li>
                 <li>
-                    <a href="/contact">Kontakt</a>
+                    <a href="#contact" data-smoothie>Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -39,7 +39,7 @@
             Zadzwoń: 888-772-030
         </div>
     </header>
-    <section class="landing">
+    <section class="landing" id="about">
         <div class="landing__logo">
             <img src="/assets/slice2.png" alt="logo">
             <span>e</span><span>x</span><span>p</span><span>l</span><span>a</span><span>y</span><span>n</span>
@@ -50,10 +50,10 @@
         consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     </section>
-    <section class="offers__section">
+    <section class="offers__section" id="offer">
         <!-- <h2 class="offers__header">Co robimy?</h2> -->
         <div class="offers__box__cnt">
-            <div class="offers__box">
+            <div class="offers__box" data-aos="fade-up">
                 <div class="offers__box__inner">
                     <div class="offers__box__frontside">
                         <img src="/assets/slice5.png" alt="box logo">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="offers__box">
+            <div class="offers__box" data-aos="fade-up" data-aos-delay=150>
                 <div class="offers__box__inner">
                     <div class="offers__box__frontside">
                         <img src="/assets/slice5.png" alt="box logo">
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="offers__box">
+            <div class="offers__box" data-aos="fade-up" data-aos-delay=300>
                 <div class="offers__box__inner">
                     <div class="offers__box__frontside">
                         <img src="/assets/slice5.png" alt="box logo">
@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="offers__box">
+            <div class="offers__box" data-aos="fade-up" data-aos-delay=450>
                 <div class="offers__box__inner">
                     <div class="offers__box__frontside">
                         <img src="/assets/slice5.png" alt="box logo">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="offers__box">
+            <div class="offers__box" data-aos="fade-up" data-aos-delay=600>
                 <div class="offers__box__inner">
                     <div class="offers__box__frontside">
                         <img src="/assets/slice5.png" alt="box logo">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div class="offers__box">
+            <div class="offers__box" data-aos="fade-up" data-aos-delay=750>
                 <div class="offers__box__inner">
                     <div class="offers__box__frontside">
                         <img src="/assets/slice5.png" alt="box logo">
@@ -146,32 +146,32 @@
             
         </div>
     </section>
-    <section class="ourWork">
+    <section class="ourWork" id="ourWork">
         <div class="ourWork__row">
-            <a href="#" class="ourWork__box ourWork__big"> </a>
+            <a href="#" class="ourWork__box ourWork__big" data-aos="fade-up"><span class="d-none">Realization 1</span></a>
         </div>
         <div class="ourWork__row">
-            <a href="#" class="ourWork__box ourWork__medium"> </a>
-            <a href="#" class="ourWork__box ourWork__small"></a>
+            <a href="#" class="ourWork__box ourWork__medium" data-aos="fade-up" data-aos-delay=150><span class="d-none">Realization 2</span></a>
+            <a href="#" class="ourWork__box ourWork__small" data-aos="fade-up" data-aos-delay=300><span class="d-none">Realization 3</span></a>
         </div>
         <div class="ourWork__row">
-            <a href="#" class="ourWork__box ourWork__big"></a>
+            <a href="#" class="ourWork__box ourWork__big" data-aos="fade-up" data-aos-delay=450><span class="d-none">Realization 4</span></a>
         </div>
         <div class="ourWork__row">
-            <a href="#" class="ourWork__box ourWork__medium"> </a>
-            <a href="#" class="ourWork__box ourWork__small"></a>
+            <a href="#" class="ourWork__box ourWork__medium" data-aos="fade-up" data-aos-delay=600><span class="d-none">Realization 5</span></a>
+            <a href="#" class="ourWork__box ourWork__small" data-aos="fade-up" data-aos-delay=750><span class="d-none">Realization 6</span></a>
         </div>
         <div class="carousel__cnt">
             <div class="carousel">
-                <a class="carousel-item" href="#"><img src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/f00895271beef81411406583871a478d/logo4231231.png"></a>
-                <a class="carousel-item" href="#"><img src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/7c64bd345bbd196c2dcd05df898ac662/TAJM_Logo_wersja_podstawowa_POZIOM.png"></a>
-                <a class="carousel-item" href="#"><img src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/f00895271beef81411406583871a478d/logo4231231.png"></a>
-                <a class="carousel-item" href="#"><img src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/7c64bd345bbd196c2dcd05df898ac662/TAJM_Logo_wersja_podstawowa_POZIOM.png""></a>
-                <a class="carousel-item" href="#"><img src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/f00895271beef81411406583871a478d/logo4231231.png"></a>
+                <a class="carousel-item" href="#"><img alt="carousel-image" src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/f00895271beef81411406583871a478d/logo4231231.png"><span class="d-none">Carousel Item</span></a>
+                <a class="carousel-item" href="#"><img alt="carousel-image" src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/7c64bd345bbd196c2dcd05df898ac662/TAJM_Logo_wersja_podstawowa_POZIOM.png"><span class="d-none">Carousel Item</span></a>
+                <a class="carousel-item" href="#"><img alt="carousel-image" src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/f00895271beef81411406583871a478d/logo4231231.png"><span class="d-none">Carousel Item</span></a>
+                <a class="carousel-item" href="#"><img alt="carousel-image" src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/7c64bd345bbd196c2dcd05df898ac662/TAJM_Logo_wersja_podstawowa_POZIOM.png"><span class="d-none">Carousel Item</span></a>
+                <a class="carousel-item" href="#"><img alt="carousel-image" src="https://trello-attachments.s3.amazonaws.com/5ecf8af41331f3027c1d9a3a/5ef9d0850303db08484122d4/f00895271beef81411406583871a478d/logo4231231.png"><span class="d-none">Carousel Item</span></a>
               </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2 class="contact__header">Podejmij z nami współpracę</h2>
         <p class="contact__subheader">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -252,5 +252,9 @@
             <a href="#" class="social__icon"><span>You Tube</span></a>
         </div>
     </footer>
+    <script src="https://unpkg.com/smoothie-js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
