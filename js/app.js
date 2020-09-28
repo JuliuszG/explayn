@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
         legal: false
     };
     const checkEmail = (e) => {
-        const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        const regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         if(regex.test(e.target.value)){
             formState.email = true;
             e.target.parentElement.classList.add("success");
             e.target.parentElement.classList.remove("error");
             e.target.parentElement.nextElementSibling.classList.remove("error__text__shown");
-        } else {
+        } else if(!regex.test(e.target.value) || e.target.value === ""){
             formState.email = false;
             e.target.parentElement.classList.remove("success");
             e.target.parentElement.classList.add("error");
@@ -74,12 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     const checkInputLength = (e, len, field) => {
+        console.log(e.target.value.length);
         if(e.target.value.length >= len) {
             formState[field] = true;
             e.target.parentElement.classList.add("success");
             e.target.parentElement.classList.remove("error");
             e.target.parentElement.nextElementSibling.classList.remove("error__text__shown");
-        } else {
+        } else if(e.target.value.length < len || e.target.value === ""){
             formState[field] = false;
             e.target.parentElement.classList.remove("success");
             e.target.parentElement.classList.add("error");
@@ -102,13 +103,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = this.querySelector("form");
     const inps = form.querySelectorAll("input");
     const txtArea = form.querySelector("textarea");
-    inps[0].addEventListener('keypress', function(e){
+    inps[0].addEventListener('input', function(e){
         checkEmail(e);
     });
-    inps[1].addEventListener('keypress', function(e){
+    inps[1].addEventListener('input', function(e){
         checkInputLength(e, 3, "name");
     });
-    txtArea.addEventListener('keypress', function(e){
+    txtArea.addEventListener('input', function(e){
         checkInputLength(e, 10, "message");
     });
     form.addEventListener('submit', function(event){
